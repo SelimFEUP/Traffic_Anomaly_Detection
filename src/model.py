@@ -2,7 +2,7 @@ import tensorflow as tf
 from tensorflow.keras import layers, models, losses
 
 class MemoryModule(layers.Layer):
-    """Revised memory module that handles batch processing correctly"""
+    """Memory module"""
     def __init__(self, mem_dim=100, mem_feat=256, alpha=0.1, **kwargs):
         super(MemoryModule, self).__init__(**kwargs)
         self.mem_dim = mem_dim
@@ -77,7 +77,7 @@ class SpectralNormalization(layers.Wrapper):
         self.layer.kernel.assign(w / sigma)
         
 class SMAAE(tf.keras.Model):
-    """Revised SMAAE with proper batch handling"""
+    """SMAAE the final model"""
     def __init__(self, input_dim=153, latent_dim=32, mem_dim=100, **kwargs):
         super(SMAAE, self).__init__(**kwargs)
         self.input_dim = input_dim
