@@ -1,3 +1,6 @@
+import tensorflow as tf
+from tensorflow.keras import layers, models, losses
+
 class MemoryModule(layers.Layer):
     """Revised memory module that handles batch processing correctly"""
     def __init__(self, mem_dim=100, mem_feat=256, alpha=0.1, **kwargs):
