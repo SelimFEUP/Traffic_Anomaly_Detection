@@ -11,6 +11,7 @@ data = scaler.fit_transform(data)
 
 model = SMAAE(input_dim=153, latent_dim=32, mem_dim=100)
 model.compile(ae_optimizer=tf.keras.optimizers.Adam(learning_rate=1e-3), d_optimizer=tf.keras.optimizers.Adam(learning_rate=1e-4))
+model.load_weights('models/model.keras')
 
 def evaluate_model(model, data, contamination=0.01):
     """Comprehensive evaluation of the anomaly detection performance"""
