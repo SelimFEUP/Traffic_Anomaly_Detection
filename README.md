@@ -1,2 +1,7 @@
-# Data_Analysis
-This repository presents some novel time-series data analysis, visualization and information extraction guide.
+# Traffic anomaly detection
+This repository presents a Spectral Memory-Augmented Adversarial Autoencoder model for anomaly detection of large-scale traffic datasets.
+
+# Usage
+´´´bash
+python3 main.py
+...
