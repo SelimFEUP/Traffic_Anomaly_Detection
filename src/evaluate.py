@@ -3,6 +3,7 @@ import numpy as np
 from src.model import SMAAE
 from src.data_loader import load_data
 from sklearn.preprocessing import MinMaxScaler
+from sklearn.metrics import precision_recall_curve, average_precision_score
 
 filepath = 'data/pems.csv'
 data = load_data(filepath)
