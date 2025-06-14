@@ -4,7 +4,7 @@ import pandas as pd
 from src.model import SMAAE
 from src.data_loader import load_data
 
-def load_model():
+def load_model(data):
     model = SMAAE(input_dim=153, latent_dim=32, mem_dim=100)
     model.compile(ae_optimizer=tf.keras.optimizers.Adam(learning_rate=1e-3), d_optimizer=tf.keras.optimizers.Adam(learning_rate=1e-4))
 
